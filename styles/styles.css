@@ -1,0 +1,408 @@
+@font-face{
+	font-family:  Lucida Handwriting Italic;
+    src:url(Lucida-Handwriting-Italic.ttf);
+}
+.todo {
+    font-family: Lucida Handwriting Italic;
+    font-style: normal;
+    color: #79AD52;
+    font-size: 400%;
+    
+}
+#logo {
+    position: relative;
+    width: 272px;
+    height: 64px;
+    left: 584px;
+    top: 72px;
+}
+#taskinput {
+    text-align-last: center;
+    padding-top: 72px;
+    border: none;
+    
+}
+#whattodo {
+    position: relative;
+    width: 504px;
+    height: 64px;
+    display: block;
+    left: 474px;
+    margin-top: 120px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    font-family: Livvic;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 45px;
+    color: #7A8076;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 6000;
+}
+#whattodo::placeholder {
+    font-family: Livvic;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: 0.0015em;
+    color: rgba(178, 185, 173, 0.5)
+}
+#кнопка2 {
+    position: relative;
+    top: -105px;
+    width: 32px;
+    height: 48px;
+    left: 465px;
+    z-index: 6001;
+
+}
+#кнопка1 {
+    position: relative;
+    top: -105px;
+    width: 32px;
+    height: 48px;
+    left: 922px;
+    z-index: 6001;
+
+}
+#ввод {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    left: 922px;
+    top: 271px;
+    z-index: 6500;
+    cursor: pointer;
+}
+body {
+    margin: auto;
+    width: 1440px;
+    height: auto;
+    max-width: 1440px;
+}
+.actions {
+    position: relative;
+    width: 504px;
+    height: 64px;
+    text-align: left;
+    background: #FFFFFF;
+    border: none;
+    font-family: Livvic;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 60px;
+    color: #7A8076;
+    left: 474px;
+    text-indent: 40px;
+    top: -50px;
+    
+}
+.actions::before {
+    content: "";
+    /* background-color: black; */
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    border-style: solid;
+    border: 1px solid #7A8076;
+    box-sizing: border-box;
+    left: 7px;
+    bottom: 20px;
+    cursor: pointer;
+}
+.done {
+    position: relative;
+    width: 504px;
+    height: 64px;
+    text-align: left;
+    background: #FFFFFF;
+    border: none;
+    font-family: Livvic;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 60px;
+    color: #B2B9AD;
+    left: 474px;
+    text-indent: 40px;
+    text-decoration-line: line-through;
+    top: -50px;
+}
+.done::before {
+    content: "";
+    background: #CCD3C6;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    border-style: solid;
+    border: 1px solid #7A8076;
+    box-sizing: border-box;
+    left: 7px;
+    bottom: 20px;
+    cursor: pointer;
+}
+.cross {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 16px;
+    top: 12px;
+    cursor: pointer;
+}
+.rename {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 64px;
+    top: 12px;
+    cursor: pointer;
+}
+.renameOff, .renameformOff, .renameinputOff, .renamebuttonOff, .renamecancelbuttonOff {
+    display: none;
+}
+.renameOn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8000;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    opacity: 0.3;
+}
+.renameformOn {
+    display: block;
+    z-index: 8001;
+    position: fixed;
+    width: 568px;
+    height: 192px;
+    background: #FFFFFF;
+    left: 33%;
+    top: 26%;
+}
+.renameinputOn {
+    position: relative;
+    background: #FFFFFF;
+    font-family: Livvic;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 45px;
+    color: #7A8076;
+    text-align: left;
+    text-indent: 48px;
+    width: 504px;
+    height: 64px;
+    background: #FFFFFF;
+    border: 1px solid #C3C3C3;
+    box-sizing: border-box;
+    top: 48px;
+    left: 32px;
+}
+.renamebuttonOn {
+    width: 64px;
+    height: 40px;
+    position: absolute;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    right: 32px;
+    bottom: 21px;
+    font-family: Livvic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #494949;
+    z-index: 6600;
+    cursor: pointer;
+}
+.renameinputOn::placeholder {
+    font-family: Livvic;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: 0.0015em;
+    color: rgba(178, 185, 173, 0.5)
+}
+.renamecancelbuttonOn {
+    font-family: Livvic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #494949;
+    background-color: #FFFFFF;
+    border: none;
+    position: relative;
+    top: 112px;
+    /* left: -108px; */
+    right: 110px;
+    cursor: pointer;
+}
+html {
+    max-width: 1440px;
+}
+.settingsOff {
+    display: none;
+}
+.settingsOn {
+    position: relative;
+    width: 504px;
+    height: 64px;
+    text-align: left;
+    background: #FFFFFF;
+    border: none;
+    font-family: Livvic;
+    font-style: italic;
+    font-weight: normal;
+    left: 474px;
+    top: -49px;
+}
+.content {
+    position: relative;
+}
+.itemsleft {
+font-family: Livvic;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 10px;
+color: #494949;
+position: absolute;
+top: 12px;
+left: 14px;
+}
+.allOn {
+font-family: Livvic;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 18px;
+color: #A53CA7;
+position: absolute;
+top: -10px;
+left: 244px;
+border: 1px solid #A53CA7;
+box-sizing: border-box;
+border-radius: 5px;
+width: 30px;
+text-align: center;
+height: 18px;
+
+}
+.allOff {
+    font-family: Livvic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #494949;
+    position: absolute;
+    top: -10px;
+    left: 244px;
+    width: 30px;
+    text-align: center;
+    height: 18px;
+    cursor: pointer;
+    }
+.activeOff {
+    font-family: Livvic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #494949;
+    position: absolute;
+    top: 10px;
+    left: 237px;
+    width: 30px;
+    text-align: center;
+    height: 18px;
+    width: 45px;
+    cursor: pointer;
+}
+.activeOn {
+    font-family: Livvic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #A53CA7;
+    position: absolute;
+    top: 10px;
+    left: 237px;
+    border: 1px solid #A53CA7;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    height: 18px;
+    width: 45px;
+}
+.completedOff {
+    font-family: Livvic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #494949;
+    position: absolute;
+    top: 30px;
+    text-align: center;
+    height: 18px;
+    left: 226px;
+    width: 72px;
+    cursor: pointer;
+}
+.completedOn {
+    font-family: Livvic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #A53CA7;
+    position: absolute;
+    top: 30px;
+    border: 1px solid #A53CA7;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-align: center;
+    height: 18px;
+    left: 226px;
+    width: 72px;
+}
+.completeall {
+    font-family: Livvic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #494949;
+    position: absolute;
+    top: -4px;
+    text-align: center;
+    height: 18px;
+    left: 400px;
+    width: 72px;
+    cursor: pointer;
+}
+.clearcompleted {
+    font-family: Livvic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    color: #494949;
+    position: absolute;
+    top: 22px;
+    text-align: center;
+    height: 18px;
+    left: 380px;
+    cursor: pointer;
+}
