@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            #todo
+        </title>
+        <meta name="description" content="todo list online" charset="utf-8">
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    </head>
+    <body bgcolor="#E1EABE">
+        <header>
+            <div id = "logoinside">
+                <img src="todo.png" height="64" width="272" id="logo">
+            </div>
+        </header>
+        <div id="taskinput">
+             <form name="taskinputname" id="taskinputfield" onsubmit="return false;">
+                <input type="text" maxlength="35" value="" placeholder="What needs to be done?" onclick="drawShelves(); return false;" name="todo" id="whattodo" required>
+                <input type="image" src="enter.png" alt="add" id="ввод" onclick="drawShelves(); return false;" >
+             </form>
+        </div>
+        <img src="button2.png" id="кнопка2">
+        <img src="button1.png" id="кнопка1">
+        <div class="maincontent"> </div>
+
+        <noscript><p>Your browser does not support scripts!</p></noscript> 
+        <div class='renameOff'> </div>
+        <form class="renameformOff">
+            <input class="renameinputOff" type="text" maxlength="35" value="" placeholder="What needs to be done?" onclick="drawShelves(); return false;" name="rename" required>
+            <button class="renamebuttonOff"> Save </button>
+            <button class="renamecancelbuttonOff"> Cancel </button>
+        </form>
+        <div class="settingsOff"> 
+            <p class="itemsleft"> </p>
+            <p class="allOn"> All </p>
+            <p class="activeOff"> Active </p>
+            <p class="completedOff"> Completed </p>
+            <p class="completeall"> Complete all </p>
+            <p class="clearcompleted"> Clear completed </p>
+        </div> 
+    </body>
+    <script src="script.js"></script>
+</html>
